@@ -1,5 +1,6 @@
 # AWS EC2 Instance Terraform Module
 # EC2 Instances that will be created in VPC Private Subnets
+
 module "ec2_private" {
   depends_on = [ module.vpc ] # VERY VERY IMPORTANT else userdata webserver provisioning will fail
   #https://developer.hashicorp.com/terraform/language/meta-arguments/depends_on
