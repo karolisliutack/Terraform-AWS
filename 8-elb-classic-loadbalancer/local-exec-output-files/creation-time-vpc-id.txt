@@ -1,0 +1,2 @@
+VPC created on Sun 29 Jan 2023 20:02:28 EET and VPC ID: vpc-0e46eb7f164834d3e
+VPC created on Mon 30 Jan 2023 16:09:22 EET and VPC ID: vpc-0d5f4b568cd6fae0b
