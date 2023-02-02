@@ -19,14 +19,14 @@ variable "instance_keypair" {
   type = string
   default = "terraform-key"
 }
-
+#https://developer.hashicorp.com/terraform/language/functions/list
 # AWS EC2 Instance Type - List
 variable "instance_type_list" {
   description = "EC2 Instance Type"
   type = list(string)
   default = ["t3.micro", "t3.small", "t3.large"]  
 }
-
+#https://developer.hashicorp.com/terraform/language/functions/map
 # AWS EC2 Instance Type - Map
 variable "instance_type_map" {
   description = "EC2 Instance Type"

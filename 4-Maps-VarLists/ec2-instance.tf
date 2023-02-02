@@ -7,6 +7,7 @@ resource "aws_instance" "myec2vm" {
   user_data = file("${path.module}/httpd-install.sh") #file function allows to read content from respective file
   key_name = var.instance_keypair
   vpc_security_group_ids = [ aws_security_group.vpc-ssh.id, aws_security_group.vpc-web.id   ]
+  #https://developer.hashicorp.com/terraform/language/meta-arguments/count
   count = 2
   tags = {
     "Name" = "Count-Demo-${count.index}"

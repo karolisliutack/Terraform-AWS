@@ -1,4 +1,5 @@
 # Create Security Group - SSH Traffic
+#https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group
 resource "aws_security_group" "vpc-ssh" { #aws_security_group - resource type, resource local name - vpc-ssh
   name        = "vpc-ssh"
   description = "Dev VPC SSH"
@@ -11,7 +12,7 @@ resource "aws_security_group" "vpc-ssh" { #aws_security_group - resource type, r
   }
 
   egress { #outbound rule
-    description = "Allow all ip and ports outbound"    
+    description = "Allow all ip and ports outbound"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
@@ -24,6 +25,7 @@ resource "aws_security_group" "vpc-ssh" { #aws_security_group - resource type, r
 }
 
 # Create Security Group - Web Traffic
+#https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group
 resource "aws_security_group" "vpc-web" {
   name        = "vpc-web"
   description = "Dev VPC Web"
@@ -40,9 +42,9 @@ resource "aws_security_group" "vpc-web" {
     to_port     = 443
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-  }  
+  }
   egress {
-    description = "Allow all ip and ports outbound"    
+    description = "Allow all ip and ports outbound"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"

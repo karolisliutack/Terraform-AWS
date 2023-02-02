@@ -1,7 +1,10 @@
 # Get latest AMI ID for Amazon Linux2 OS
+
+#https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami
+
 data "aws_ami" "amzlinux2" {
-  most_recent      = true #most recent AMI if there are multiple ami available
-  owners           = ["amazon"] #amazon owners
+  most_recent = true       #most recent AMI if there are multiple ami available
+  owners      = ["amazon"] #amazon owners
   filter {
     name   = "name"
     values = ["amzn2-ami-hvm-*-gp2"]

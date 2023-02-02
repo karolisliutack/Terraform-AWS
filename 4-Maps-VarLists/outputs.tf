@@ -6,7 +6,7 @@
 4. Legacy Splat Operator (latest) - Returns List
 5. Latest Generalized Splat Operator - Returns the List
 */
-
+##https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#attributes-reference
 # Output - For Loop with List
 output "for_output_list" {
   description = "For Loop with List"

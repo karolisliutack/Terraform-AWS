@@ -1,4 +1,5 @@
 # Terraform Settings Block
+#https://registry.terraform.io/providers/hashicorp/aws/latest
 terraform {
   required_providers {
     aws = {
@@ -17,5 +18,5 @@ provider "aws" {
 # Resource Block
 resource "aws_instance" "ec2demo" {
   ami           = "ami-0b5eea76982371e91" # Amazon Linux 2 Kernel 5.10 AMI 2.0.20221210.1 x86_64 HVM gp2 - US-East-1
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 }

@@ -8,7 +8,7 @@ resource "aws_instance" "myec2vm" {
   # Create EC2 Instance in all Availabilty Zones of a VPC  
   #for_each = toset(data.aws_availability_zones.my_azones.names)
   for_each = toset(keys({for az, details in data.aws_ec2_instance_type_offerings.my_ins_type: 
-    az => details.instance_types if length(details.instance_types) != 0 }))
+    az => details.instance_types if length(details.instance_types) != 0 })) #for every availability zone us-east-1a", "us-east-1b assigns instance type
     #https://developer.hashicorp.com/terraform/language/functions/keys
   availability_zone = each.key # You can also use each.value because for list items each.key == each.value
   tags = {
